@@ -1,0 +1,37 @@
+# Site settings
+title: Fast Robots Lab Reports (rga47)                  # The title of your site
+description: Rachel Arena's Fast Robots Lab Reports '25
+author: Rachel Arena                         # Your name or site author
+email: rga47@cornell.edu             # Optional: your email
+theme: minima                             # Choose a GitHub Pages theme
+
+# URL settings
+baseurl: "/docs"                          # Add "/docs" if using the /docs folder, or leave it blank for root
+url: "https://yourusername.github.io"     # Replace with your GitHub Pages URL
+
+# Markdown settings
+# markdown: kramdown                        # Use Kramdown for Markdown rendering
+
+
+# Navigation settings
+header_pages:                             # Manually specify pages to show in the navigation bar
+  - index.md
+
+
+# Plugins
+plugins:
+  - jekyll-seo-tag                        # Adds SEO tags to your site
+  - jekyll-feed                           # Adds an RSS feed
+  - jekyll-sitemap                        # Adds a sitemap
+
+
+# Exclude files from the site
+exclude:
+  - README.md                             # Exclude README.md from the website
+
+# Default layout for all pages
+defaults:
+  - scope:
+      path: ""                            # Apply to all files
+    values:
+      layout: default                     # Use the default layout
