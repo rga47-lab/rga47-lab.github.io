@@ -13,7 +13,7 @@ I plugged the Artemis board into my computer and selected the correct Board and 
 
 ### Task 2: Blink
 
-#VID
+[![Watch the video](https://raw.githubusercontent.com/rga47-lab/rga47-lab.github.io/docs/files/BlinkThumbnail.png)](https://raw.githubusercontent.com/rga47-lab.github.io/docs/files/Blink.mov)
 
 I ran the example code file Blink, which blinks the on-board LED. The LED is connected to GPIO pin 19 on the Artemis. 
 
