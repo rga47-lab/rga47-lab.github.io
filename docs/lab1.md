@@ -12,6 +12,7 @@ For this prelab I opened the Arduino IDE for the first time in 3 years, updated 
 I plugged the Artemis board into my computer and selected the correct Board and Port settings in the Arduino IDE.
 
 ### Task 2: Blink
+
 [![BLINK!](files/BlinkThumbnail.png)](files/Blink.mov)
 
 I ran the example code file Blink, which blinks the on-board LED. The LED is connected to GPIO pin 19 on the Artemis. 
@@ -58,43 +59,57 @@ To ensure proper BLE communication, we made necessary configurations, including:
 
 
 ### Task 1: ECHO
+
 ![Echo_code](files/echo_code.png)
+
 ![Echo](files/echo.png)
 
 I implemented a simple BLE command that sent a message to the Artemis board, which then echoed it back. Testing in the Jupyter Notebook confirmed successful transmission and reception, as shown in the terminal output.
 
 ### Task 2: SEND_THREE_FLOATS
+
 ![send_three_floats_code](files/send_three_floats_code.png)
+
 ![send_three_floats](files/send_three_floats1.png)
+
 ![send_three_floats](files/send_three_floats2.png)
 
 I implemented the SEND_THREE_FLOATS command, enabling the Artemis board to extract and process three float values sent from the computer. The floats were received, stored, and printed successfully on the Artemis serial monitor, confirming correct data transmission and parsing.    
 
 ### Task 3: GET_TIME_MILLIS
+
 ![get_time_millis_code](files/get_time_millis_code.png)
+
 ![get_time_millis](files/get_time_millis.png)
 
 I implemented the GET_TIME_MILLIS command, which requested a timestamp from the Artemis board. When triggered, the board retrieved the current system time in milliseconds and sent it over BLE. The received timestamps were logged in Python, demonstrating successful retrieval with minimal delay.
 
 ### Task 4: 
+
 ![notificationhandler](files/notificationhandler.png)
 
 I implemented a notification handler  in Python to listen for updates from the Artemis board. When the string characteristic was updated with a new timestamp, the handler extracted the time value and stored it in a list. This approach allowed the computer to receive timestamped messages asynchronously.
 
 ### Task 5: Time_Loop and Data Transfer Rate
+
 ![time_loop_code](files/time_loop_code.png)
+
 ![time_loop](files/time_loop.png)
 
 I wrote a loop that continuously transmitted timestamps from the Artemis board to the computer, allowing me to calculate the effective data transfer rate. By collecting timestamps over a few seconds, I calculated the average transmission rate to be 130 transactions over 3 seconds or about 43 transactions/sec.
 
 ### Task 6: SEND_TIME_DATA
+
 ![send_time_data_code](files/send_time_data_code.png)
+
 ![send_time_data](files/send_time_data.png)
 
 I implemented a global array on the Artemis board to store timestamp data before sending it in batches using the SEND_TIME_DATA command. This method reduced the overhead of continuous transmissions and allowed bulk data transfer when requested. The received data was logged in Python. 
 
 ### Task 7: GET_TEMP_READINGS
+
 ![get_temp_readings_code](files/get_temp_readings_code.png)
+
 ![get_temp_readings](files/get_temp_readings.png)
 
 An additional array was introduced to store temperature sensor readings alongside timestamps. The GET_TEMP_READINGS command enabled the board to send both time and temperature data in a structured format.
