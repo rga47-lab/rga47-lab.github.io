@@ -86,7 +86,7 @@ I implemented a notification handler  in Python to listen for updates from the A
 
 ![time_loop](files/time_loop.png)
 
-I wrote a loop that continuously transmitted timestamps from the Artemis board to the computer, allowing me to calculate the effective data transfer rate. By collecting timestamps over a few seconds, I calculated the average transmission rate to be 160 messages/3 seconds = ___.
+I wrote a loop that continuously transmitted timestamps from the Artemis board to the computer, allowing me to calculate the effective data transfer rate. By collecting timestamps over a few seconds, I calculated the average transmission rate to be 130 transactions over 3 seconds or about 43 transactions/sec.
 
 ### Task 6: SEND_TIME_DATA
 
@@ -98,20 +98,20 @@ I implemented a global array on the Artemis board to store timestamp data before
 
 ![get_temp_readings](files/get_temp_readings.png)
 
-An additional array was introduced to store temperature sensor readings alongside timestamps. The GET_TEMP_READINGS command enabled the board to send both time and temperature data in a structured format.e
+An additional array was introduced to store temperature sensor readings alongside timestamps. The GET_TEMP_READINGS command enabled the board to send both time and temperature data in a structured format.
 
 ### Task 8: STREAMING VS. DOWNLOADING
 
 In this lab, we explored two methods of data transmission:
 
-Streaming via Notifications: Data was transmitted continuously at a fixed rate of 42 payloads per second, ensuring a steady sampling    rate. This method is ideal for real-time applications but has lower overall efficiency due to the smaller payload size per transmission.
+Streaming via Notifications: Data was transmitted continuously at a fixed rate of 43 payloads per second, ensuring a steady sampling rate. This method is ideal for real-time applications but has lower overall efficiency due to the smaller payload size per transmission.
 
-Data Transmisssion via Stored Arrays: Data was collected over time and sent in larger chunks only when requested. This method is more efficient in terms of throughput (___), but the delay in receiving data makes it less suitable for real-time control applications.
+Data Transmisssion via Stored Arrays: Data was collected over time and sent in larger chunks only when requested. This method is more efficient in terms of throughput, but the delay in receiving data makes it less suitable for real-time control applications.
 
 For applications requiring constant monitoring, streaming is preferable due to its consistent sampling rate. On the other hand, the second option is beneficial when higher efficiency and larger data transfers are needed, such as in offline data logging.
 
 The Artemis board has 384 kB of RAM. Given that each timestamp requires 4 bytes and each temperature reading requires 4 bytes, we could store 48,000 samples of each on the Artemis.
 
-## Discussion: 
+## Conclusion: 
 
 This lab provided a strong foundation for understanding BLE communication and debugging. By implementing multiple data transfer methods, we explored the trade-offs between real-time streaming and downloading. These insights will be valuable for designing and using a robust wireless debugging system in future labs.
