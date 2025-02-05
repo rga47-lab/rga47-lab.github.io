@@ -18,19 +18,19 @@ I ran the example code file Blink, which blinks the on-board LED. The LED is con
 
 ### Task 3: Serial
 
-#VID
+[![SERIAL!](files/SerialThumbnail.png)](files/Serial.mov)
 
 I ran the example code file Serial, which has the Artemis print any text it is sent onto the serial monitor. Whatever characters I type into the input on the serial monitor are printed to the output of the serial monitor.
 
 ### Task 4: Analog Read
 
-#VID
+[![AnalogRead!](files/AnalogReadThumbnail.png)](files/AnalogRead.mov)
 
 I ran the example code file analogRead, which tests the temperature sensor. I exhaled hot air onto the chip to watch the temperature rise, and then let it cool down. The video is of the chip cooling down.
 
-### Task 5: PDM
+### Task 5: Microphone Output
 
-#VID
+[![MicrophoneOutput!](files/MicrophoneOutputThumbnail.png)](files/MicrophoneOutput.mov)
 
 I ran the example code file PDM, which tests the microphone. By watching the serial monitor I was able to see the change in recorded highest frequency in the ambient noise of the lab as well as when I clapped or spoke next to it. 
 
