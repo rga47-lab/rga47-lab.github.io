@@ -39,7 +39,7 @@ I ran the example code file PDM, which tests the microphone. By watching the ser
 ## Prelab 1b
 ### Setup
 
-#MAC ADDRESS PIC
+![MACAddress](files/MACAddress.png)
 
 To set up the computer for Lab 1, we followed the instructions to install the necessary dependencies, including the Artemis board support package and the required virtual environment. A serial connection was established with the Artemis board, and the Bluetooth MAC address was retrieved successfully, confirming that communication with the board was functional.
 
