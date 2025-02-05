@@ -12,8 +12,7 @@ For this prelab I opened the Arduino IDE for the first time in 3 years, updated 
 I plugged the Artemis board into my computer and selected the correct Board and Port settings in the Arduino IDE.
 
 ### Task 2: Blink
-
-[![Watch the video](https://raw.githubusercontent.com/rga47-lab/rga47-lab.github.io/docs/files/BlinkThumbnail.png)](https://raw.githubusercontent.com/rga47-lab.github.io/docs/files/Blink.mov)
+[![BLINK!](files/BlinkThumbnail.png)](files/Blink.mov)
 
 I ran the example code file Blink, which blinks the on-board LED. The LED is connected to GPIO pin 19 on the Artemis. 
 
