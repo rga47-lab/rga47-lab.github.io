@@ -53,9 +53,9 @@ The Artemis board operates as a BLE peripheral, allowing a computer to request a
 ### Configurations
 
 To ensure proper BLE communication, we made necessary configurations, including:
-    - Setting up the correct baud rate for serial communication.
-    - Enabling BLE advertising on the Artemis board.
-    - Configuring the UUID for Bluetooth.
+- Setting up the correct baud rate for serial communication.
+- Enabling BLE advertising on the Artemis board.
+- Configuring the UUID for Bluetooth.
 
 
 ### Task 1: ECHO
@@ -106,7 +106,7 @@ In this lab, we explored two methods of data transmission:
 
 Streaming via Notifications: Data was transmitted continuously at a fixed rate of 42 payloads per second, ensuring a steady sampling    rate. This method is ideal for real-time applications but has lower overall efficiency due to the smaller payload size per transmission.
 
-Transmisssion via Stored Arrays: Data was collected over time and sent in larger chunks only when requested. This method is more efficient in terms of throughput (___), but the delay in receiving data makes it less suitable for real-time control applications.
+Data Transmisssion via Stored Arrays: Data was collected over time and sent in larger chunks only when requested. This method is more efficient in terms of throughput (___), but the delay in receiving data makes it less suitable for real-time control applications.
 
 For applications requiring constant monitoring, streaming is preferable due to its consistent sampling rate. On the other hand, the second option is beneficial when higher efficiency and larger data transfers are needed, such as in offline data logging.
 
