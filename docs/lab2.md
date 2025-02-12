@@ -17,14 +17,9 @@ AD0_VAL is the LSB of the 7 bit I2C address. For us, it gets set to 1 because th
 
 ### Accelerometer vs. Gyroscope
 
+The accelerometer graph represents the IMU data precisely as one might expect it to. As the board increases in spead along an axis, the plot shows an increase along that axis, and the opposite is true as the board speed decreases along an axis. It is also notable that different from the accelerometer, the gyroscope measures angular rotation. When you rotate the board on a flat plane the gyroscope registers the change while the accelerometer does not. 
 
-
-
-
-
-
-
-
+I also added LED blink statements to the board set-up code so that I can visually verify that the board is running when I want it to be. 
 
 
 ## Accelerometer
@@ -70,14 +65,14 @@ I also shook the table slightly to introduce more noise into the system - which 
 
 ![fft](files/noisy_data_fft.png)
 
-![lpf](files/noisy_data_lpf.png.png)
+![lpf_noisy](files/noisy_data_lpf.png)
 
 
 ## Gyroscope
 
 The gyroscope data was collected in a similar manner to the accelerometer data. The math was a little bit different and, most notably, we get yaw data in addition to roll and pitch. Some other differences: While the accelerometer is very noisy, the gyroscope sees less spikey inconsistencies. However, the gyroscope data does drift. If I rotate the IMU several times the start and end point values are not the same with the gyroscope. The following graphs compare the accelerometer and gyroscope data well: 
 
-![gyro_compare](files/accel_vs_gyro_noisy_zero.png)
+![gyro_compare](files/accel_vs_gyro_raw_zero.png)
 
 This one is with the filtered acceleration data: 
 ![gyro_compare](files/accel_vs_gyro_filtered_zero.png)
