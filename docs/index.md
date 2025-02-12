@@ -7,3 +7,4 @@ Hello! I'm a junior ECE student pursuing a minor in robotics. My academic intere
 ## Lab Reports: 
 
 - [Lab 1](lab1.md)
+- [Lab 2](lab2.md)
