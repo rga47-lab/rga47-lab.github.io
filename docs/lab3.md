@@ -1,4 +1,4 @@
-### Lab 3 (ToF)
+# Lab 3 (ToF)
 
 ## Prelab
 
@@ -18,25 +18,25 @@ This is a diagram of the wiring. I chose to use both the longer cables for the T
 
 ## Lab Tasks: 
 
-# Soldering
+### Soldering
 
 ![wiringDiagram](files/solderingToF.jpeg)
 
 Here is a photo of all of the wires (battery, and ToF sensors) soldered and connected to the Artemis. 
 
-# I2C Adressing
+### I2C Adressing
 
 ![I2C](files/I2CaddressScan.HEIC)
 
 Here is a photo of Artemis scanning for an I2C device. As you can see, it finds a device with the address 0x29. This is slightly surprising as the datasheet tells us the device should have an address of 0x52. However, closer reading tells us that I2C uses the LSB as a Read/Write indicator bit. Ignoring the LSB turns 0x52 into 0x29, and the address makes sense. 
 
-# Sensor Data Mode
+### Sensor Data Mode
 
 ![I2C](files/setDistanceCode.png)
 
 The default mode for the two ToF sensors is the long mode. However, after reading the data sheet I decided that short mode would be more useful. I put both sensors into short mode during setup (code snippet shown above). While long mode can sense up to 4 meters and short mode can only sense up to 1.3 m, there is a tradeoff with accuracy. For now, I believe that the lack of distance is worth the higher accuracy, but of course when I start actually doing stunts with the car my opinion might change. Luckily it's very easy to switch between the two modes (just one line of code per sensor). I also suspect that I might end up having one sensor in long mode and one in short mode in future labs. 
 
-# ToF Sensor Range, Accuracy, Repeatability, and Ranging Time
+### ToF Sensor Range, Accuracy, Repeatability, and Ranging Time
 
 ![oneToFcode](files/ToFCodeOneSensor.png)
 
@@ -63,7 +63,7 @@ I also tested repeatability by running the moving box test several times. Here i
 
 ![one_ToF_range_test_take2](files/movingonetofTake2.png)
 
-# Time vs Distance (2 sensors)
+### Time vs Distance (2 sensors)
 
 After verifying functionality with one ToF sensor, I switched to adding the second one. I talked about addressing the second ToF sensor earlier in the lab report so I won't repeat that explanation. Here, however, is what my new case looked like for collecting both sensors data at the same time. 
 
@@ -79,13 +79,13 @@ Here is the results of the hallway test:
 
 ![HallwayTestSetup](files/celsiuswith2tofTake2.png)
 
-# ToF Sensor Speed
+### ToF Sensor Speed
 
 ![Timing](files/ToFtimingAnalysis.HEIC)
 
 I collect 1000 data points in about 20 seconds, which is a 50 Hz data collection rate. This is not super fast. In order to investigate timing further, I printed the amount of time in milliseconds that it takes to run the main while loop. I did this by recording the time at the beginning, at the end, and then printing the difference. I saw that this result averaged about 8 ms. Overall, these sensors are pretty slow, and I am pretty sure the checkForDataRead() loops are the main thing that slows things down. Occasionally the timing jumps to 11 or 14 ms, and I think that jump happens when the data is ready. Overall, this seems to be a slow sensor. 
 
-# Two ToF sensors and the IMU
+### Two ToF sensors and the IMU
 
 After confirming both sensors worked together, I also added the IMU. Here is a graph of all three sources of data getting streamed together. I recorded the data while moving the two ToF sensors between two walls and spinning the IMU. 
 
