@@ -24,6 +24,10 @@ This is a diagram of the wiring. I chose to use both the longer cables for the T
 
 # I2C Adressing
 
+![I2C](I2CaddressScan.HEIC)
+
+Here is a photo of Artemis scanning for an I2C device. As you can see, it finds a device with the address 0x29. This is slightly surprising as the datasheet tells us the device should have an address of 0x52. However, closer reading tells us that I2C uses the LSB as a Read/Write indicator bit. Ignoring the LSB turns 0x52 into 0x29, and the address makes sense. 
+
 # Sensor Data Mode
 
 # 2 ToF Sensors
