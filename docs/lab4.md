@@ -8,7 +8,7 @@ For the first part of this lab I mapped out all of my connections for the motor 
 
 ![diagram](files/lab4Diagram.png)
 
-The following were connected: 
+The following pins were connected: 
 
 - GND: Connected to both Artemis and negative battery lead on both motor drivers
 - Vin: Connected to the positive battery lead
@@ -39,20 +39,20 @@ Here are the Oscilloscope results from the above test:
 
 [![oscilloscope](files/oscilloscope_test_2_thumbnail.jpg)](https://youtu.be/xf4KXScc2-Y)
 
+### Testing the Drivers On the Car (With Power Supply)
+
 Here are videos of the wheels spinning while on the power supply. I tested both motors individually and then together for both forwards and backwards motion. 
 
-On power supply: 
+[![one motor on power supply](files/two_wheels_power_supply_thumbnail.jpg)](https://youtu.be/lVUizTtC_xs)
 
-[![one motor on power supply](files/two_wheels_power_supply_thumbnail)](https://youtu.be/lVUizTtC_xs)
-
-[![Two motors on power supply](files/four_wheels_power_supply_thumbnail)](https://youtu.be/0d5_rjXq3sE)
+[![Two motors on power supply](files/four_wheels_power_supply_thumbnail.jpg)](https://youtu.be/0d5_rjXq3sE)
 
 
-### Wheels Spinning (with battery)
+### Wheels Spinning (With Battery)
 
 Next I tested both wheels spinning at the same time both forward and backward. This test was on the battery, not on the power supply. At this point I had all of the electronics soldered together but just piled on top of the car and not integrated neatly. That comes next. 
 
-[![Two motors on battery](files/four_wheels_battery_thumbnail)](https://youtube.com/shorts/xLMQMZAlw9k?feature=share)
+[![Two motors on battery](files/four_wheels_battery_thumbnail.png)](https://youtube.com/shorts/xLMQMZAlw9k?feature=share)
 
 ### Components in the Car (Labeled)
 
