@@ -74,6 +74,11 @@ Here is a video of my car moving in a straight line for 6 ft.
 
 [![calibration testing](files/Open_Loop_Calibration_thumbnail.png)](https://youtube.com/shorts/gO3iIBNBw1w?feature=share)
 
+Here is my code for calibrating the motors: 
+
+![calibration code](files/lab4_calibration_code_1.png)
+![calibration code](files/lab4_calibration_code_2.png)
+
 I also had my car perform a combination of movements to prove control. Here is a video of my car moving forward, backward, and turning on the spot. 
 
 [![open loop control](files/Open_Loop_multiple_commands_thumbnail.png)](https://youtube.com/shorts/C2MTlM1CSnM?feature=share)
