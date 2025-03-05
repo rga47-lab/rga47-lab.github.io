@@ -82,3 +82,7 @@ Here is my code for calibrating the motors:
 I also had my car perform a combination of movements to prove control. Here is a video of my car moving forward, backward, and turning on the spot. 
 
 [![open loop control](files/Open_Loop_multiple_commands_thumbnail.png)](https://youtube.com/shorts/C2MTlM1CSnM?feature=share)
+
+Here's the code for going backwards and turning: 
+
+![more code](files/lab4_backwards_turning_code.png)
