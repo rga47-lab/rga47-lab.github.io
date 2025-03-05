@@ -6,7 +6,7 @@
 
 For the first part of this lab I mapped out all of my connections for the motor drivers and thought about how I would mount things to my car. Here is a diagram of the connections: 
 
-*******INSERT PIC HERE***********
+![diagram](files/lab4Diagram.png)
 
 The following were connected: 
 
@@ -21,37 +21,42 @@ The motor drivers and the Artemis are each powered by their own batteries (Artem
 
 ## Lab Tasks
 
-### Power Supply and Oscilliscope Setup
+### Power Supply and Oscilloscope Setup
 
-*******INSERT VIDEO HERE***********
+[![test set up](files/bench_test_set_up_thumbnail.jpg)](https://youtu.be/DVE2TGSrQys)
 
 I set my power supply to about 3.7V. The 850 mAh battery we use is 3.7V nominal. In actuallity it probably ranges from about 3.2V to 4.2V so any value in that range would work. I set the current limit at 2A because that's the max current the motor drivers can handle. However, it is worth noting that I don't anticipate reaching anywhere close to 2A while testing on the power supply.
 
 ### Testing the Drivers Off the Car
 
-*******INSERT PICTURE HERE***********
+![diagram](files/Lab4_pwm_test.png)
 
 I used the above code to loop through the different PWM values and analogWrite them to one of the channels on a single motor. I repeated this for both directions on both motor drivers. 
 
-Here are the Oscilliscope results from the above test: 
+Here are the Oscilloscope results from the above test: 
 
-*******INSERT VIDEOS HERE***********
+[![oscilloscope](files/oscilloscope_test_1_thumbnail.jpg)](https://youtu.be/fF6gCjPj_0M)
 
-Here is a video of the wheels spinning forward and then backward (I repeated this test for both motors):
+[![oscilloscope](files/oscilloscope_test_2_thumbnail.jpg)](https://youtu.be/xf4KXScc2-Y)
 
-*******INSERT VIDEO HERE***********
+Here are videos of the wheels spinning while on the power supply. I tested both motors individually and then together for both forwards and backwards motion. 
+
+On power supply: 
+
+[![one motor on power supply](files/two_wheels_power_supply_thumbnail)](https://youtu.be/lVUizTtC_xs)
+
+[![Two motors on power supply](files/four_wheels_power_supply_thumbnail)](https://youtu.be/0d5_rjXq3sE)
+
 
 ### Wheels Spinning (with battery)
 
 Next I tested both wheels spinning at the same time both forward and backward. This test was on the battery, not on the power supply. At this point I had all of the electronics soldered together but just piled on top of the car and not integrated neatly. That comes next. 
 
-Here is a video of all of the wheels spinning at the same time:
+[![Two motors on battery](files/four_wheels_battery_thumbnail)](https://youtube.com/shorts/xLMQMZAlw9k?feature=share)
 
-*******INSERT VIDEO HERE***********
+### Components in the Car (Labeled)
 
-### Components in Car
-
-*******INSERT PICTURE HERE***********
+![components](files/lab4_car_layout.jpeg)
 
 ### Lower Limit PWM
 
@@ -63,12 +68,12 @@ When I first ran the vehicle on the ground there was a very significant drift to
 
 Here is a photo of my testing set-up:
 
-*******INSERT PICTURE HERE***********
+![components](files/lab4_test_setup_callibration.jpeg)
 
 Here is a video of my car moving in a straight line for 6 ft.
 
-*******INSERT VIDEO HERE***********
+[![calibration testing](files/Open_Loop_Calibration_thumbnail.png)](https://youtube.com/shorts/gO3iIBNBw1w?feature=share)
 
 I also had my car perform a combination of movements to prove control. Here is a video of my car moving forward, backward, and turning on the spot. 
 
-*******INSERT VIDEO HERE***********
+[![open loop control](files/Open_Loop_multiple_commands_thumbnail.png)](https://youtube.com/shorts/C2MTlM1CSnM?feature=share)
