@@ -19,7 +19,8 @@ Here are some videos of the car at different Kp values and the graphs of the cor
 Note that I got my code to work on my car, but as I began taking videos and recording graphs for this lab report, my motor drivers annihilated themselves. I'm not entirely sure what happened but my current theory is that because I had them hanging loose next to each other in the car, the Vin pin on one driver shorted with the GND pin on the other driver. Oops. More testing is needed to confirm that they are truly and completely dead but I'm 98.5% sure that they are and that I need new motor drivers (sorry about that). As this happened around 10pm on Tuesday night, the videos shown are of my code running on Selena Yao's car (thank you Selena). 
 
 Kp = 0.2
-*********INSERT VIDEO*************
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GS5flJMKNHQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 *********INSERT 3 Pictures*************
 
 Kp = 1.4
