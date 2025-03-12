@@ -19,17 +19,26 @@ Here are some videos of the car at different Kp values and the graphs of the cor
 Note that I got my code to work on my car, but as I began taking videos and recording graphs for this lab report, my motor drivers annihilated themselves. I'm not entirely sure what happened but my current theory is that because I had them hanging loose next to each other in the car, the Vin pin on one driver shorted with the GND pin on the other driver. Oops. More testing is needed to confirm that they are truly and completely dead but I'm 98.5% sure that they are and that I need new motor drivers (sorry about that). As this happened around 10pm on Tuesday night, the videos shown are of my code running on Selena Yao's car (thank you Selena). 
 
 Kp = 0.2
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/GS5flJMKNHQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-*********INSERT 3 Pictures*************
+<object width="425" height="350">
+  <param name="movie" value="https://youtube.com/shorts/vA7aVGoPfVA?feature=share" />
+  <param name="wmode" value="transparent" />
+  <embed src="https://youtube.com/shorts/vA7aVGoPfVA?feature=share"
+         type="application/x-shockwave-flash"
+         wmode="transparent" width="425" height="350" />
+</object>
+
+
+
+![small kp](files/small_kp_graphs.png)
 
 Kp = 1.4
 *********INSERT VIDEO*************
-*********INSERT 3 Pictures*************
+![good kp](files/good_kp_graphs.png)
 
 Kp = 2
 *********INSERT VIDEO*************
-*********INSERT 3 Pictures*************
+![large kp](files/large_kp_graphs.png)
 
 
 And just to prove I did indeed get code working on my car for a short while, here is a video of my car running one of the intermediate Kp values I tested while tuning. 
