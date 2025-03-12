@@ -4,7 +4,7 @@
 
 I chose to approach debugging in this lab the same way I approached it in previous labs. First I collected all of the data and then I did a bulk transfer to my computer at the end. I collect data while the car is moving, and then I stop the car and send the data to my laptop. This code is the same as in the previous labs. 
 
-*********INSERT CODE PIC*************
+![prelab code](files/prelab5_code.png)
 
 On the python side, I start my notification handler and print the data being received. I also graph it immediately after collection so I have a visual representation. 
 
@@ -38,9 +38,11 @@ Kp = 2:
 
 And just to prove I did indeed get code working on my car for a short while, here is a video of my car running one of the intermediate Kp values I tested while tuning. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6-gc7TkWwaA" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0BFt5zU2nEI" frameborder="0" allowfullscreen></iframe>
 
 As you may have noticed in the above videos and graphs, my car oscillates a lot around the 1ft mark. This is because I bounded the pwm values between +/- 35 and +/- 255. I started testing with an upper bound of 100 but raised it to 255 later. I also experimented with the lower bound and tried 35, 45, and 50 to see if there was a significant difference in result (there wasn't). As error approaches 0, the motor inputs oscillate between pwm values of +35 and -35. This is because I mapped any pwm values less than +35 to 35 and any negative pwm values greater than -35 to -35. I tried several things to fix this problem, but all of my proposed fixes caused additional problems. Solving this oscillation issue will require more time and attention in the future. The first thing I tried was adding an integrator and doing PI control. I found that anything other than a very very small value of Ki (about 0.0015) caused my car to slam into the wall. And a Ki value that small did not have a large effect on the system. There are several solutions to integral windup, but I decided to abandoned PI and take a different approach for now. My next attempt was to continuously check the error values and if the car was with 5% of the target distance to call a stop function which set all of the motor inputs to 0. This had the unintended side effect of preventing my car from driving backwards to correct overshoot. I'm not sure why yet, this also needs more investigation. For now, I'm just dealing with the oscillations. 
+
+![oscillation cause](files/pwm_bounds_code.png)
 
 ### Range/Sampling time discussion
 
@@ -52,7 +54,13 @@ My sampling time (before extrapolation) is about 40Hz (800 data points in 20 sec
 
 Linear extrapolation is useful because the ToF sensors have a very slow sampling time. In fact, after implementing linear extrapolation my control loop was 4 times faster than the sampling rate of the ToF sensors. To be honest, despite the fact that I'm now "getting" more data and running the PID control loop more often, I found my implemented controller to be generally worse with extrapolation than without. This is because my car was quite jumpy and the oscillations I discussed earlier were definitely worse. In the future I'll want to filter this data because extrapolation just amplified the noise already in the system. Once I implement a filter, linear extrapolation will definitely become an extremely useful tool. 
 
+![linear extrapolation code](files/linear_extrapolation_code.png)
+
 Here is a video and some graphs from my P controller with linear extrapolation implemented: 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_W9Dih6R8fQ" frameborder="0" allowfullscreen></iframe>
+
+![linear extrapolation](files/linear_extrapolation_graphs.png)
 
 ### Conclusion: 
 
