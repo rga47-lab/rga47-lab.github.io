@@ -20,14 +20,7 @@ Note that I got my code to work on my car, but as I began taking videos and reco
 
 Kp = 0.2
 
-<object width="425" height="350">
-  <param name="movie" value="https://youtube.com/shorts/vA7aVGoPfVA?feature=share" />
-  <param name="wmode" value="transparent" />
-  <embed src="https://youtube.com/shorts/vA7aVGoPfVA?feature=share"
-         type="application/x-shockwave-flash"
-         wmode="transparent" width="425" height="350" />
-</object>
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vA7aVGoPfVA" frameborder="0" allowfullscreen></iframe>
 
 
 ![small kp](files/small_kp_graphs.png)
