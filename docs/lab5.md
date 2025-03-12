@@ -18,25 +18,27 @@ Here are some videos of the car at different Kp values and the graphs of the cor
 
 Note that I got my code to work on my car, but as I began taking videos and recording graphs for this lab report, my motor drivers annihilated themselves. I'm not entirely sure what happened but my current theory is that because I had them hanging loose next to each other in the car, the Vin pin on one driver shorted with the GND pin on the other driver. Oops. More testing is needed to confirm that they are truly and completely dead but I'm 98.5% sure that they are and that I need new motor drivers (sorry about that). As this happened around 10pm on Tuesday night, the videos shown are of my code running on Selena Yao's car (thank you Selena). 
 
-Kp = 0.2
+Kp = 0.2:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vA7aVGoPfVA" frameborder="0" allowfullscreen></iframe>
 
-
 ![small kp](files/small_kp_graphs.png)
 
-Kp = 1.4
-*********INSERT VIDEO*************
+Kp = 1.4:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GS5flJMKNHQ" frameborder="0" allowfullscreen></iframe>
+
 ![good kp](files/good_kp_graphs.png)
 
-Kp = 2
-*********INSERT VIDEO*************
-![large kp](files/large_kp_graphs.png)
+Kp = 2:
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1HcoIkLjdjE" frameborder="0" allowfullscreen></iframe>
+
+![large kp](files/large_kp_graphs.png)
 
 And just to prove I did indeed get code working on my car for a short while, here is a video of my car running one of the intermediate Kp values I tested while tuning. 
 
-*********INSERT VIDEO*************
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6-gc7TkWwaA" frameborder="0" allowfullscreen></iframe>
 
 As you may have noticed in the above videos and graphs, my car oscillates a lot around the 1ft mark. This is because I bounded the pwm values between +/- 35 and +/- 255. I started testing with an upper bound of 100 but raised it to 255 later. I also experimented with the lower bound and tried 35, 45, and 50 to see if there was a significant difference in result (there wasn't). As error approaches 0, the motor inputs oscillate between pwm values of +35 and -35. This is because I mapped any pwm values less than +35 to 35 and any negative pwm values greater than -35 to -35. I tried several things to fix this problem, but all of my proposed fixes caused additional problems. Solving this oscillation issue will require more time and attention in the future. The first thing I tried was adding an integrator and doing PI control. I found that anything other than a very very small value of Ki (about 0.0015) caused my car to slam into the wall. And a Ki value that small did not have a large effect on the system. There are several solutions to integral windup, but I decided to abandoned PI and take a different approach for now. My next attempt was to continuously check the error values and if the car was with 5% of the target distance to call a stop function which set all of the motor inputs to 0. This had the unintended side effect of preventing my car from driving backwards to correct overshoot. I'm not sure why yet, this also needs more investigation. For now, I'm just dealing with the oscillations. 
 
