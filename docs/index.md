@@ -12,3 +12,5 @@ Hello! I'm a junior ECE student pursuing a minor in robotics. My academic intere
 - [Lab 4](lab4.md)
 - [Lab 5](lab5.md)
 - [Lab 6](lab6.md)
+- [Lab 7](lab7.md)
+- [Lab 8](lab8.md)
