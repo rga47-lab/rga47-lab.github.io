@@ -43,3 +43,7 @@ Next I integrated the Kalman filter into the control loop, using the estimated d
 ******INSERT Video******
 
 ******INSERT Graphs******
+
+### Conclusion
+
+
