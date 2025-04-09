@@ -6,19 +6,21 @@ The objective of task A was to drive my car at a wall, get it to flip 180 degree
 
 Here is a photo of the set up: 
 
-********INSERT PHOTO OF SET UP HERE********
+![set up](files/lab8_setup.HEIC)
 
 Here is what my car looks like with the weight taped to the front: 
 
-********INSERT PHOTO OF CAR HERE********
+![car](files/car_with_weight_in_front.HEIC)
 
 ## Videos
 
-Here are the three videos of successful(-ish) flips:
+Here are the three videos of successful flips:
 
-********INSERT VIDEO HERE********
-********INSERT VIDEO HERE********
-********INSERT VIDEO HERE********
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VikdSljC-xk" frameborder="0" allowfullscreen></iframe>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3RmackaXXdE" frameborder="0" allowfullscreen></iframe>
 
-## Bloopers:
+Blooper:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vTcz6OQcpt0" frameborder="0" allowfullscreen></iframe>
+
