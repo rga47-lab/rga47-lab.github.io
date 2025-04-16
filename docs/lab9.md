@@ -10,7 +10,7 @@ I had a very hard time implementing a fix for this, but I saw Aidan McNay's post
 
 Here is a video of my car spinning in a circle. As you can see, the car moves in increments of 15 degrees, stopping to collect ToF data in-between. 
 
-******INSERT VIDEO******
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jCRJCBiHN2g" frameborder="0" allowfullscreen></iframe>
 
 Here is some of the code: 
 
