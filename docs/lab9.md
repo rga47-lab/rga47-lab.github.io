@@ -21,11 +21,12 @@ Here is some of the code:
 
 Next was to collect some data! Unfortunately, it took me so long to get PID working that I did not get to test my robot in the lab set up. However! I did create my own lab set up with Tyler, Kelvin, and Selena in a hallway in Phillips. Here are some photos: 
 
-******INSERT PIC of Room******
+![room](files/lab_9_room_1.HEIC)
+![room](files/lab_9_room_2.HEIC)
 
 Here is a diagram with points to place the car mapped out with coordinates
 
-******INSERT diagram******
+![room](files/lab_9_room_diagram.jpg)
 
 Then I ran my car a bunch of times. I found that my car tended to drift a lot (the left side consistently starts spinning before the right side). I didn't spend much time trying to actually fix this issue, and instead decided to just collect the data and figure out what to do with it/try to clean it up in post processing.
 
