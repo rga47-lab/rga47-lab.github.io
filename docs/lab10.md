@@ -15,7 +15,7 @@ Here is the code:
 
 ## Odom_Motion_Model
 
-This function takes the current pose, the previous pose, and the control input from compute_control, and outputs the probability that the robot is in the current pose. It does this by comparing the actual movement derived from odometry data, and the ideal movement the robot would take based on its prior state. Here, the ideal transition is represented as a Gaussian distribution centered at the expected new state, given the previous state and control input. This gives us the probability p(x' | x, u), or the likelihood that the robot is actually at position x'. 
+This function takes the current pose, the previous pose, and the control input from compute_control, and outputs the probability that the robot is in the current pose. It does this by comparing the actual movement derived from odometry data, and the ideal movement the robot would take based on its prior state. Here, the ideal transition is represented as a Gaussian distribution centered at the expected new state, given the previous state and control input. This gives us the probability p(x'∣x, u), or the likelihood that the robot is actually at position x'. 
 
 Here is the code: 
 
