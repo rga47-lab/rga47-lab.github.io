@@ -15,7 +15,9 @@ Here is the code:
 
 ## Odom_Motion_Model
 
-This function takes the current pose, the previous pose, and the control input from compute_control, and outputs the probablilty that the robot is in the current pose. It does this by comparing the actual movement derived from odometry data, and the ideal movement the robot would take based on its prior state. Here, the ideal transistion is represented as a Gaussian distribution centered at the expected new state, given the previous state and control input. This gives us the probability p(x'|x, u), or the likelihood that the robot is actually at position x'.
+This function takes the current pose, the previous pose, and the control input from compute_control, and outputs the probability that the robot is in the current pose. It does this by comparing the actual movement derived from odometry data, and the ideal movement the robot would take based on its prior state. Here, the ideal transistion is represented as a Gaussian distribution centered at the expected new state, given the previous state and control input. This gives us the probability $$
+p(x' \mid x, u)
+$$, or the likelihood that the robot is actually at position x'. 
 
 Here is the code: 
 
@@ -50,7 +52,7 @@ Here is the code:
 
 Here is a video of the simulation running: 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QMSz2fuCir0" frameborder="0" allowfullscreen></iframe>
+<iframe width="840" height="473" src="https://www.youtube.com/embed/QMSz2fuCir0" frameborder="0" allowfullscreen></iframe>
 
 The most probable state after each iteration of the filter, it's probability, and the ground truth pose are displayed on the right side of the video for each point.
 
