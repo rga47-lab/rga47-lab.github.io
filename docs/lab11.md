@@ -22,20 +22,28 @@ On the python side, the perform_observation_loop function calls the MAP_ROOM cas
 
 Here are the localization results from each point: 
 
-Point (-3,-2)
+### Point (-3,-2)
 ![point1](files/lab11_-3_-2.png)
 ![point1](files/lab11_-3_-2_stats.png)
 
-Point (5,-3)
-![point2](files/lab11_5_-3.png)
-![point2](files/lab11_5_-3_stats.png)
+This was a very good result! The belief is very close to the ground truth. 
 
-Point (5,3)
-![point3](files/lab11_5_3.png)
-![point3](files/lab11_5_3_stats.png)
+### Point (0,3)
+![point2](files/lab11_0_3.png)
+![point2](files/lab11_0_3_stats.png)
 
-Point (0,3)
-![point4](files/lab11_0_3.png)
-![point4](files/lab11_0_3_stats.png)
+This pose, though slightly worse than (-3,-2), was still very accurate. The loss of accuracy may be because of drift in the spinning robot. Also, there are more farther walls at this point than at the last one. 
 
-For all of these points, the localized pose is very close to the ground truth. Shockingly so, in fact. There is some veriation, but to be honest it is pretty small. The biggest difference is in the angle values. These diffrences may be due to drift in the robot, as it occasionally shifted on its axis as it turned. However, I'm very happy with these results going into lab 12.
+### Point (5,-3)
+![point3](files/lab11_5_-3.png)
+![point3](files/lab11_5_-3_stats.png)
+
+Unlike the last two, this point was quite inaccurate. I suspect this has to do with the box, but I'm not sure exactly what the issue the filter has with this point is. I will have to run more trials in this spot later. 
+
+### Point (5,3)
+![point4](files/lab11_5_3.png)
+![point4](files/lab11_5_3_stats.png)
+
+This point is back to being pretty accurate! The belief is slightly off, but still pretty close to the ground truth. 
+
+For most of these points, the localized pose is fairly close to the ground truth. That's pretty impressive and was very cool to see. The results of this lab overall seem very promising and I'm looking forward to lab 12!
