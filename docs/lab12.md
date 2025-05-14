@@ -18,15 +18,17 @@ The waypoints to hit were:
     8. (0, 3)
     9. (0, 0)      <--end
 
-I started by trying to get localization to work, but quickly encountered some major difficulties. As such, I decided to get a good run with just PID control and then return to localization if I had time (I did not :/ ).  
+I initially planned to use localization, but after running into significant issues, I switched to a simpler but reliable approach using only PID control. I decided to first complete a successful run using hardcoded PID setpoints, and then return to localization if time allowed (unfortunately it did not :/).
 
-I decided to have my car drive along the most direct path between each waypoint. I know some people limited their robot to 90 degree turns, but my PID control was pretty good and I decided this wasn't necessary. 
+I decided to have my car drive along the most direct path between each waypoint. I know some people limited their robot to 90 degree turns, but my PID control has been fairly successful, and I felt confident in the controller’s ability to handle non-perpendicular headings.
 
-The code structure I decided on was the following: I made a seperate case statement for each waypoint where orientation and linear control were both used to move the robot to the corresponding waypoint. I then called each waypoint case consecutively over BLE. This made testing incrementally and testing the path to different setpoitns individually easy. 
+The overaching control structure for this lab involved defining a separate case for each waypoint in my Arduino code, with both orientation and linear PID logic to guide the robot. Commands were sent over BLE from Python, triggering each waypoint’s corresponding routine. This modular setup made it easy to test and debug segments of the path individually.
 
 ## PID Control
 
-I did have to re-tune my orientation PID controller because I had removed the tape previously on my robot's wheels for stunt demos. Also I kinda hated the tape and didn't want to put it back on. A large challenge/annoyance I encountered during this lab was setting the min PWM value for the controller to be bounded by. To low and my car would get stuck while turning and be unable to overcome friction, and to high a value would cause the car to occasionally spin out of control while approching a setpoint. This by itself was fine, but the "good" min value would change as battery voltage ran low. Since this lab was long and involved running the car a lot, battery voltage was often low. I spent a lot of time waiting for batteries to charge. 
+A major challenge in this lab was tuning the orientation PID controller after removing the tape from my robot’s wheels (removed for stunt demo). I didn’t want to reapply the tape (sticky residue = bad), so I had to adjust the minimum PWM value to find the sweet spot between "not enough torque to move" and "spins out wildly while approaching the setpoint."
+
+The biggest complication was that this optimal PWM threshold would shift as the battery voltage dropped. Since this lab required many trial runs, I spent a lot of time swapping or recharging batteries. This variability made tuning especially frustrating.
 
 ******INSERT CODE PIC HERE (ARDUINO)******
 
@@ -47,13 +49,13 @@ I did have to re-tune my orientation PID controller because I had removed the ta
 
 ### Localization
 
-Unfortuntaely I was unable to get code that used localization to work correctly for this lab. Here's a video of my robot spinning in a circle though: 
+Unfortuntaely I was unable to get path planning that used localization to work correctly for this lab. Here's a video of my robot spinning in a circle though: 
 
 ******INSERT VID HERE******
 
 
 ## Conclusion
 
-This has been a great semester and I really enjoyed taking this class! Shoutout to Prof. Helbling and all the TAs who made this class work. Thank you!
+This has been a great semester and I really enjoyed taking this class! Special thanks to Prof. Helbling and all the TAs for their support throughout the course.
 
-p.s. thanks for getting the second world setup outside the lab - that was really helpful
+P.S. Thanks for setting up the second world outside the lab - that was incredibly helpful. 
