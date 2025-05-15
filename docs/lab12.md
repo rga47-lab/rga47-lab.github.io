@@ -30,28 +30,31 @@ A major challenge in this lab was tuning the orientation PID controller after re
 
 The biggest complication was that this optimal PWM threshold would shift as the battery voltage dropped. Since this lab required many trial runs, I spent a lot of time swapping or recharging batteries. This variability made tuning especially frustrating.
 
-******INSERT CODE PIC HERE (ARDUINO)******
+![code](files/lab12_pid_orientation_code.png)
 
-******INSERT CODE PIC HERE (PYTHON)******
+![code](files/lab12_pid_linear_code.png)
+
+![code](files/lab12_python_code.png)
 
 ## Results
 
 ### Best attempt 1: 
-******INSERT VID HERE******
+
+<iframe width="840" height="473" src="https://www.youtube.com/embed/8SwcipIW5Bc" frameborder="0" allowfullscreen></iframe>
 
 //describe attempt
 
 ### Best attempt 2: 
-******INSERT VID HERE******
+
+<iframe width="840" height="473" src="https://www.youtube.com/embed/8SwcipIW5Bc" frameborder="0" allowfullscreen></iframe>
 
 //describe attempt
-
 
 ### Localization
 
 Unfortuntaely I was unable to get path planning that used localization to work correctly for this lab. Here's a video of my robot spinning in a circle though: 
 
-******INSERT VID HERE******
+<iframe width="840" height="473" src="https://www.youtube.com/embed/XKt81ngWo9A" frameborder="0" allowfullscreen></iframe>
 
 
 ## Conclusion
