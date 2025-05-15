@@ -42,13 +42,13 @@ The biggest complication was that this optimal PWM threshold would shift as the 
 
 <iframe width="840" height="473" src="https://www.youtube.com/embed/8SwcipIW5Bc" frameborder="0" allowfullscreen></iframe>
 
-//describe attempt
+As you can see, despite the fact that the robot does make it to the end and generally performs well, there is a spot or two that it needs some help on. The corner at waypoint (5,-3) and (5,-2) was a repeated problem. It's a tight turn, and my car doesn't always like to drive in a straight line. 
 
 ### Best attempt 2: 
 
 <iframe width="840" height="473" src="https://www.youtube.com/embed/8SwcipIW5Bc" frameborder="0" allowfullscreen></iframe>
 
-//describe attempt
+This run my robot required slightly more help. Generally successful though!
 
 ### Localization
 
