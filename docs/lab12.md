@@ -48,7 +48,7 @@ As you can see, despite the fact that the robot does make it to the end and gene
 
 <iframe width="840" height="473" src="https://www.youtube.com/embed/8SwcipIW5Bc" frameborder="0" allowfullscreen></iframe>
 
-This run my robot required slightly more help. Generally successful though!
+This run my robot was a little low on battery. As a result, it required a nudge at (-2,-1) to complete the 90 degree turn. Also, the car tends to drift more when it's low on battery and as a result it got a little stuck in the corner at (5,3). I think if my battery was charged this would have been a pretty much perfect run. 
 
 ### Localization
 
